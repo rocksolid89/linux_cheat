@@ -1,0 +1,33 @@
+#you want all users in the group operators to be able to mount  and umount  filesystems and nobody else.Which command would  accomplish that ?
+#вы хотите разрешить всем пользователям группы "операторы" монтировать и демонтировать файловые системы и ничего больше. Какими командами можно достичь этого ?
+
+	chgrp operators /sbin/*mount; chmod 4750 /sbin/*mount - меняет группу группу владельцев файлов mount & umount; выставляет бит SUID для этих файлов
+	chgrp operators /sbin/*mount; chmod u+s,o-rwx /sbin/*mount - делает тоже самое, за исключением того, что права доступа изменяются с помощью буквенных идентификаторов.
+
+
+#what command line redirection  characters instruct the shell to read from the current input source until a specific word, on a separate line and without trailing spaces, is reached ?
+#какие символы перенаправления командной строки говорят командной оболочке читать из текуцего входного канала, пока не будет достигнуто определенное слово (в отдельной строке без пробелов)
+	<<
+
+#which of the folowing command sequences save the current file and quit the vi editor
+#Какие из следующих последовательностей команд сохранят текущий файл и закроют редактор vi
+	wq and x (причем последняя сохранит файл только в том случае. если в нем были сделаны изменения)
+
+#which of the following commands will change all CR LF pairs in an imported text file to Linux Standard LF characters and store it as newfile
+#Какая из следующих команд заменит все CR LF пары в импортированном файле на стандартные для Linux LF и сохранит их в новом файле ? 
+	tr -d '\r' < userlist.txt  > userlist.txt
+
+#Which of the following command will display the string oops if foo is failed
+	foo || echo "oops" (потому, что это эквивалент логического или и если foo всегда 0, а echo "oops" всегда 1, то 0 || 1 = 1)
+
+#Your SATA hard disk appears as SCSI in the /dev and /proc file systems. Why ?
+#ваш SATA жесткий диск обозначается как SCSI в файловых системах /dev and /proc. Почему ?
+	Потому, что драйверы SATA взаимодействуют со SCSI на следующем kernel level (generic disk driver)
+
+#how you will examine kernel bootup messages ?
+#как вы проверите логи ядра при загрузке системы ?
+	dmesg | less
+
+#what is the default signal for the kill command of no signal is specified as a command-line option?
+#Какой сигнал для команды kill является синалом по-умолчанию, если никаких сигналов не указанов качестве опций командной строки ?
+	ответ - SIGTERM (15)

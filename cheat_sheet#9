@@ -1,0 +1,20 @@
+#с помощью какой команды можно просматривать файл, в который добавляются новые строки
+	tail -f
+
+#вы залогинены под пользователем user1 и хотите перелогиниться под пользователем user2, при этом вы хотите переключить весь environment
+	su -l tux2
+
+#какая команда покажет все файлы, установленные из пакета package.rpm
+	rpm -qlp package.rpm
+#usb1.1 maximux bandwith
+	12Mbit/s
+
+#you have Samba Installed from source and want to locate smb.conf file. which command do you use ?
+	find / -type f -name smb.conf
+	udpatedb; locate smb.conf
+#which options on mkdir will create multiple levels of subdirectories?
+	mkdir -p
+
+#какая команда покажет количество использованного дискового пространства на разделе root?
+	df -k /
+	du -skx /

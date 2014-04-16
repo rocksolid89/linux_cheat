@@ -1,0 +1,27 @@
+#continue our cheat sheet'ind
+
+#free space of each partition
+чтобы отобразить все смонтированный разделы, их размеры и свободное место можно использовать команду `df`
+
+#grub
+root(hd1,4) эквивалентно /dev/hdb5
+
+#ps -auxw | tee list
+эта команда заполнит файл list списком запущенных в данный момент процессов
+
+#rpm -qa - покажет список текущих пакетов, установленных в системе RedHat
+
+#check numbers of free inodes on partition
+
+df -i /dev/sda1
+
+#this command can be used to limit the disk space usage allowance of a particular user
+
+edquota
+
+#read file line by line in reverse order
+
+tac file.tx
+
+#сколько устройств ultra wide scsi может быть подключено к шине ( включая сам хост адаптер )
+ответ: всего 16 устройств ultra wide scsi

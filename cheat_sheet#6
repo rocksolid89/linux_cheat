@@ -1,0 +1,30 @@
+# продолжаем отвечать на вопросы экзамена LPI
+
+
+#what command can put suspended job into background ?
+#какая команда может отправить процесс, приостановленный в данный момент в бэкграунд ?
+	bg 
+	процессу отправлен сигнал CTRL-Z. чтобы отправить процесс выполняться в фон нужно выполнить bg job_name
+	
+	sample: top & -> running in background. fg top -> process stopped.
+						- fg top (again) -> process will be resumed
+						-- bg top -> process will be sent into background again
+
+
+
+#would a user other than the owner or root be able to read a file with permission 744?
+#может ли пользватель, отличный от root или владельца файла с правами 744 иметь возможность прочитать его?
+	с указанными правами пользователь может прочитать содержимое этого файла
+
+#you have read\write permission on an ordinary file foo. you have just run a command ln foo. what would happen if you ran rm foo?
+#вы имеете права на чтение\запись для обычного файла foo. вы выполнили команду `ln foo`. что произойдет, если вы запустите `rm foo`?
+	файл foo будет удален, в то время как file bar останется доступным.
+
+#what command can be used to kill a process by name ?
+#какая команда может быть использована, чтобы завершить процесс, указав его имя?
+	killall
+
+#what umask value prevents group members from executing a new file, whereas other users can neither execute  nor write it ?
+#какое значение umask запретит группк выполнять файл.в то время как остальные пользователи не смогут ни выполнить этот файл, ни произвести в него запись.
+	umask value is 013
+

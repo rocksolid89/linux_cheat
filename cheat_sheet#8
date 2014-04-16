@@ -1,0 +1,22 @@
+#what command do you use to  determine the modem IRQ (the modem is on COM1)?
+#какую команду вы используете, чтобы узнать IRQ используемые модемом ?
+	-- setserial /dev/ttyS0
+
+#an admin has created files namend ff all over the system. How would you remove them all ?
+	-- find / -name ff -exec /bin/rm {} \;
+
+#you have many files  with extension .foo. which of the following command will allow you to remove all *.foo filem in /tmp directory
+	-- ls | grep '.foo$' | xargs rm
+
+#which command will disconnect the users and allow you to safely execute maintenance tasks?
+	telinit 1
+
+	init, telinit - process control initialization
+	this runlevel are reserved:
+		1 - single user mode
+		S - this runlevel using after starting PC
+		0 - using for halt the system
+		6 - using for reboot
+
+#which of the following will display the string "oops" if foo is fails?
+	foo || echo "oops"

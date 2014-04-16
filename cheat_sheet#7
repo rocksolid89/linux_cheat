@@ -1,0 +1,31 @@
+продолжаем подготовку k LPI exams
+
+#the command echo $! will produce what output?
+#команда echo $! выведет ?
+	ID последнего процесса, отправленного в бэкграунд
+
+#who can change the ownership of a file?
+#кто может изменить владельца файла ?
+	это может сделать только пользователь root
+
+#how would you list all files starting with x,y,z ?
+#каким образом можно вывести все файлы, начинающиеся с x,y,z ?
+	ls [xyz]+
+
+
+#Использование символов CR LF в текстовых файлах различных операционных систем:
+
+	CR (Ox0D) - macos - \r
+	LF (0x0A) - *nix - \n
+	CRLF (0x0D 0xoA) - windows - \r\n
+
+чтобы преобразовать файлы из CRLF -> LF можно выполнить команду
+	tr -d '\r' < file > newfile
+
+	tr - позволяет переформатировать или удать текс их stdin и записать его в stdout
+	например, чтобы удалить повторяющие символы в строке можно использовать команду s ( squeeze ). все это очень юзабельно !
+
+#when reading man pages, a lot of extra characters are shown on screen. Which of the following command can help to deal with this problem?
+#при чтении страниц документации, на экране отображается слишком много дополнительных символов. Какая программа поможет решить эту ситуацию ?
+
+	команда - col
